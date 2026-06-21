@@ -1,0 +1,12 @@
+<nav class="navbar-lewagon">
+  <%= link_to "My list", lists_path, class: "nav-link" %>
+  <%= link_to "New list", new_list_path, class: "nav-link" %>
+</nav>
+<h1><%= @list.name %></h1>
+<% @list.bookmarks.each do |bookmark| %>
+  <div>
+    <%= bookmark.movie.title %>
+    <%= bookmark.comment %>
+  </div>
+  <%= link_to "Remove bookmark", bookmark_path(bookmark), data: { turbo_method: :delete }%>
+<% end %>

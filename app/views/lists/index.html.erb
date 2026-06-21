@@ -1,1 +1,16 @@
-<h1>List</h1>
+<nav class="navbar-lewagon">
+  <%= image_tag "popcorn.jpg", class: "avatar" %>
+  <%= link_to "My list", lists_path, class: "nav-link" %>
+  <%= link_to "New list", new_list_path, class: "nav-link"%>
+</nav>
+<div class="banner">
+  <h1>Save any kind of movies</h1>
+</div>
+<div class="cards">
+ <h2>My List</h2>
+    <% @lists.each do |list| %>
+    <div class="card">
+    <li><%= list.name %></li>
+    </div>
+  <% end %>
+  </div>

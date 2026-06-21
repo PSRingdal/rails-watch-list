@@ -1,0 +1,15 @@
+ .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+.card {
+  background-image: url("cinema.jpg");
+  background-size: cover;
+  background-position: right;
+  height: 250px;
+  width: 250px;
+}
+  h1{
+    background-color: white;
+  }
+}

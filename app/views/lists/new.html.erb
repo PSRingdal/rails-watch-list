@@ -1,0 +1,9 @@
+<nav class="navbar-lewagon">
+  <%= link_to "My list", lists_path, class: "nav-link" %>
+  <%= link_to "New list", new_list_path, class: "nav-link"%>
+</nav>
+<h1>Create new list</h1>
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
+<% end %>

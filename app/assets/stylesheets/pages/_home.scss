@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+.banner {
+  background-image: url("movie theater.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: white;
+  }
+}

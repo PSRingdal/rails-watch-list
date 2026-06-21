@@ -12,6 +12,17 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = list.new()
+    @list = List.new(strong_params)
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      render :new, status: 422
+    end
   end
+end
+
+private
+
+def strong_params
+ params.require(:list).permit(:name)
 end
