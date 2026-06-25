@@ -24,5 +24,5 @@ end
 private
 
 def strong_params
- params.require(:list).permit(:name)
+ params.require(:list).permit(:name, :photo)
 end
